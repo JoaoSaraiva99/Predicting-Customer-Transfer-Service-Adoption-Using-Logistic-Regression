@@ -73,3 +73,71 @@ From a business perspective, the project demonstrates that:
 * It is possible to predict transfer demand with meaningful accuracy
 * The company can move from reactive to proactive service offering
 * Targeted notifications can significantly increase conversion rates
+
+# Insights Deepdive (Technical Perspective)
+1. Class Imbalance Challenge
+
+The dataset presents a strong class imbalance, with significantly fewer transfer purchases compared to non-purchases.
+To address this, the following techniques were applied:
+
+* RandomOverSampler to balance the training data
+* Focus on Recall and F1-score for the positive class (Transfer = 1)
+* Reduced reliance on Accuracy as a primary metric
+2. Models Implemented
+
+The following classification models were tested:
+
+* Decision Tree Classifier
+* Bagging Classifier
+* Random Forest Classifier
+* Gradient Boosting Classifier
+* XGBoost Classifier
+
+Additionally, hyperparameter tuning was applied using:
+
+GridSearchCV (for Bagging, Gradient Boosting, XGBoost, and Random Forest)
+
+3. Model Performance Summary
+4. 
+Model	Accuracy	F1 (Macro)	Recall (Class 1)	F1 (Class 1)
+Decision Tree	0.8729	0.5824	0.23	0.23
+Bagging	0.8989	0.5987	0.21	0.25
+Random Forest	0.9115	0.6165	0.21	0.28
+Gradient Boosting	0.7807	0.6152	0.73	0.36
+XGBoost	0.8515	0.6390	0.51	0.36
+
+6. Key Findings
+
+## Best Overall Model (Balanced Performance)
+### XGBoost Classifier
+* Highest F1 Macro (0.6390)
+* Good balance between precision and recall
+* More stable across both classes
+## Best Model for Business Objective (Detect Buyers)
+### Gradient Boosting Classifier
+* Highest Recall for Class 1 (0.73)
+* Best at identifying customers who will purchase transfers
+* Strong F1-score for Class 1 (0.36)
+* Highest Accuracy (But Misleading)
+Random Forest
+* Accuracy: 0.9115
+* Low recall for buyers (0.21)
+* Poor fit for business goal due to missed opportunities
+* 
+8. Technical Interpretation
+* Models like Decision Tree and Bagging underperformed in detecting the minority class
+* Random Forest favored majority class predictions, leading to high accuracy but poor recall
+*Boosting models (Gradient Boosting & XGBoost) showed superior performance by:
+** Capturing non-linear relationships
+** Better handling complex feature interactions
+** Improving detection of rare events (transfer purchases)
+
+9. Final Model Selection
+Recommended Model: Gradient Boosting Classifier
+
+Why?
+
+* Maximizes detection of actual buyers (highest recall)
+* Aligns with business objective: do not miss potential customers
+* Acceptable trade-off between false positives and missed opportunities
+  
