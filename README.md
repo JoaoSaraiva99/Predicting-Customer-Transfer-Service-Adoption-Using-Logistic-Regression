@@ -118,12 +118,12 @@ XGBoost	0.8515	0.6390	0.51	0.36
 * Highest Accuracy (But Misleading)
 
 ## 5. Technical Interpretation
-* Models like Decision Tree and Bagging underperformed in detecting the minority class
-* Random Forest favored majority class predictions, leading to high accuracy but poor recall
-*Boosting models (Gradient Boosting & XGBoost) showed superior performance by:
-** Capturing non-linear relationships
-** Better handling complex feature interactions
-** Improving detection of rare events (transfer purchases)
+###  Models like Decision Tree and Bagging underperformed in detecting the minority class
+###  Random Forest favored majority class predictions, leading to high accuracy but poor recall
+### * Boosting models (Gradient Boosting & XGBoost) showed superior performance by:
+* Capturing non-linear relationships
+* Better handling complex feature interactions
+* Improving detection of rare events (transfer purchases)
 
 ## 6. Final Model Selection
 Recommended Model: Gradient Boosting Classifier
