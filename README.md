@@ -97,13 +97,16 @@ Additionally, hyperparameter tuning was applied using:
 
 GridSearchCV (for Bagging, Gradient Boosting, XGBoost, and Random Forest)
 
+<img width="1570" height="790" alt="imagem" src="https://github.com/user-attachments/assets/e075b387-8501-4862-b3fa-21ffd463d684" />
+
 ## 3. Model Performance Summary
-Model	Accuracy	F1 (Macro)	Recall (Class 1)	F1 (Class 1)
-Decision Tree	0.8729	0.5824	0.23	0.23
-Bagging	0.8989	0.5987	0.21	0.25
-Random Forest	0.9115	0.6165	0.21	0.28
-Gradient Boosting	0.7807	0.6152	0.73	0.36
-XGBoost	0.8515	0.6390	0.51	0.36
+| Model | Accuracy | F1 (Macro) | Recall (Class 1) | F1 (Class 1) |
+|------|----------:|------------:|-----------------:|-------------:|
+| Decision Tree | 0.8729 | 0.5824 | 0.23 | 0.23 |
+| Bagging | 0.8989 | 0.5987 | 0.21 | 0.25 |
+| Random Forest | **0.9115** | 0.6165 | 0.21 | 0.28 |
+| Gradient Boosting | 0.7807 | 0.6152 | **0.73** | **0.36** |
+| XGBoost | 0.8515 | **0.6390** | 0.51 | 0.36 |
 
 ## 4. Key Findings
 
@@ -120,7 +123,7 @@ XGBoost	0.8515	0.6390	0.51	0.36
 ## 5. Technical Interpretation
 ###  Models like Decision Tree and Bagging underperformed in detecting the minority class
 ###  Random Forest favored majority class predictions, leading to high accuracy but poor recall
-### * Boosting models (Gradient Boosting & XGBoost) showed superior performance by:
+###  Boosting models (Gradient Boosting & XGBoost) showed superior performance by:
 * Capturing non-linear relationships
 * Better handling complex feature interactions
 * Improving detection of rare events (transfer purchases)
