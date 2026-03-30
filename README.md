@@ -51,8 +51,25 @@ New variables were created to improve model performance:
 
 Variables were:
 
-*Kept: ReservationValue, Length of Stay (relevant for transfer behavior)
-*Removed: IDs, apartment characteristics, OTA origin, and irrelevant structural variables
-*Target variable: Transfer (Y/N), converted into binary
+* Kept: ReservationValue, Length of Stay (relevant for transfer behavior)
+* Removed: IDs, apartment characteristics, OTA origin, and irrelevant structural variables
+* Target variable: Transfer (Y/N), converted into binary
 
 These decisions ensured a clean, consistent, and model-ready dataset, reducing noise and improving predictive capability.
+
+# Executive Summary
+## Overview of Findings (Business Perspective)
+
+The analysis shows that customer behavior regarding transfer purchases is highly dependent on contextual and behavioral factors, rather than purely demographic variables.
+
+Key business insights include:
+
+* Customers with shorter booking windows are more likely to purchase transfers
+* Check-in timing plays a crucial role (late arrivals show higher propensity)
+* Location and distance to airport significantly influence demand
+* Seasonality effects (high season months) increase likelihood of purchase
+
+From a business perspective, the project demonstrates that:
+* It is possible to predict transfer demand with meaningful accuracy
+* The company can move from reactive to proactive service offering
+* Targeted notifications can significantly increase conversion rates
