@@ -1,4 +1,4 @@
-# Predicting-Customer-Transfer-Service-Adoption-Using-Logistic-Regression
+# Predicting Customer Transfer Service Adoption Using Logistic Regression
 This project focuses on applying logistic regression algorithms to predict whether customers are likely to purchase a transfer service.
 
 A company that manages a portfolio of tourist-oriented real estate properties is considering offering a transfer service to its clients. To support this decision, the project analyzes historical customer data to identify patterns and determine which customer profiles show the highest propensity to purchase the service.
